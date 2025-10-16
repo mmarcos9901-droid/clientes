@@ -144,8 +144,8 @@
                 if (user) {
                     userId = user.uid;
                     // Simplificamos la ruta para que sea más robusta
-                    clientsCollectionRef = collection(db, `users/${userId}/clients`);
-                    expensesCollectionRef = collection(db, `users/${userId}/expenses`);
+                    clientsCollectionRef = collection(db, `clients`);
+expensesCollectionRef = collection(db, `expenses`);
                     setupRealtimeListeners();
                 } else {
                     await signInAnonymously(auth).catch(err => {
